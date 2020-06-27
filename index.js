@@ -9,10 +9,10 @@ application.use(express.urlencoded({ extended: true }))
 
 application.get('/', (request, response, next) => response.send('Karbon version 1.0'))
 
-application.post('/profile', function (request, response, next) {
+application.post('/uppercase', function (request, response, next) {
 	let data = request.body;
-	if (data.name) {
-		data.name = data.name.toUpperCase();
+	if (data.text) {
+		data.text = data.text.toUpperCase();
 		response.json(data);
 	} else {
 		response.json();
