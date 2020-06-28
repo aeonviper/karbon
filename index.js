@@ -7,7 +7,7 @@ application.use(cors())
 application.use(express.json())
 application.use(express.urlencoded({ extended: true }))
 
-application.get('/', (request, response, next) => response.send('Karbon version 1.0'))
+application.get('/', (request, response, next) => response.send('Karbon version 1.5'))
 
 application.post('/uppercase', function (request, response, next) {
 	let data = request.body;
