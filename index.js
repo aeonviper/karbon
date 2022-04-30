@@ -13,9 +13,9 @@ application.use(cors())
 application.use(express.json())
 application.use(express.urlencoded({ extended: true }))
 
-application.get('/', (request, response, next) => response.send('Karbon version 3.0'))
+application.get('/', (request, response, next) => response.send('Karbon version 5.0'))
 
-application.post('/uppercase', function (request, response, next) {
+application.all('/uppercase', function (request, response, next) {
         let data = request.body;
         if (data.text) {
                 data.text = data.text.toUpperCase();
